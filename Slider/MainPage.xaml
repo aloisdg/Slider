@@ -23,6 +23,58 @@
             <TextBlock Text="Slider Tips" Margin="0" HorizontalAlignment="Left"/>
         </Grid>
 
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <ScrollViewer>
+                <StackPanel>
+                    <TextBlock>1</TextBlock>
+                    <StackPanel x:Name="ContainerSlider1">
+                        <Grid HorizontalAlignment="Left" Background="Orange" Height="24" Width="{Binding ElementName=Slider1, Path=Value }" />
+                        <Grid HorizontalAlignment="Left" Background="BlueViolet" Height="24" Width="{Binding ElementName=Slider1, Path=Value }" />
+                        <Grid HorizontalAlignment="Left" Background="GreenYellow" Height="24" Width="{Binding ElementName=Slider1, Path=Value }" />
+                        <Grid Margin="-12,0">
+                            <Slider x:Name="Slider1" HorizontalAlignment="Stretch" 
+                                Minimum="0" Maximum="{Binding ActualWidth, ElementName=ContainerSlider1}" Value="0.5" />
+                        </Grid>
+                    </StackPanel>
+                    <TextBlock>2</TextBlock>
+                    <Grid x:Name="ContainerSlider2" Background="Green">
+                        <Grid Background="Blue" HorizontalAlignment="Left" Width="{Binding Value, ElementName=Slider2}"></Grid>
+                        <Grid Margin="-12,0">
+                            <Slider x:Name="Slider2" Height="100" HorizontalAlignment="Stretch" 
+                                Minimum="0" Maximum="{Binding ActualWidth, ElementName=ContainerSlider2}" Value="200" />
+                        </Grid>
+                    </Grid>
+                    <TextBlock>3</TextBlock>
+                    <Grid x:Name="ContainerSlider3" Background="{StaticResource PhoneChromeBrush}">
+                        <Grid Background="{StaticResource PhoneAccentBrush}" HorizontalAlignment="Left" Width="{Binding Value, ElementName=Slider3}"></Grid>
+                        <Grid Margin="0">
+                            <Slider x:Name="Slider3" Opacity="0" Height="100" HorizontalAlignment="Stretch" 
+                            Minimum="0" Maximum="{Binding ActualWidth, ElementName=ContainerSlider3}" Value="50" />
+                        </Grid>
+                    </Grid>
+                    <TextBlock>4</TextBlock>
+                    <Grid x:Name="ContainerSlider4" Background="{StaticResource PhoneChromeBrush}">
+                        <StackPanel Orientation="Horizontal">
+                            <Grid Background="{StaticResource PhoneAccentBrush}" Width="{Binding Value, ElementName=Slider4}"></Grid>
+                            <Grid x:Name="Cursor4" Width="20" Margin="-10,0,0,0" Background="{StaticResource PhoneForegroundBrush}"/>
+                        </StackPanel>
+                        <Slider x:Name="Slider4" Opacity="0" Height="100" 
+                                Minimum="0" Maximum="{Binding ActualWidth, ElementName=ContainerSlider4}" Value="100" />
+                    </Grid>
+                    <TextBlock>5</TextBlock>
+                    <Grid Height="{Binding Height, ElementName=Slider5}" x:Name="ContainerSlider5" Background="{StaticResource PhoneChromeBrush}">
+                        <StackPanel Orientation="Horizontal">
+                            <Grid Background="{StaticResource PhoneAccentBrush}" Width="{Binding Value, ElementName=Slider5}"></Grid>
+                            <Grid x:Name="Cursor5" Width="20" Margin="-10,0,0,0" Background="{StaticResource PhoneForegroundBrush}"/>
+                        </StackPanel>
+                        <Slider x:Name="Slider5" Opacity="0" Height="100" 
+                                    Minimum="0" Maximum="{Binding ActualWidth, ElementName=ContainerSlider5}"
+                                    Value="150" ValueChanged="Slider5_ValueChanged" />
+                    </Grid>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+
         <!--<Image Source="/Assets/AlignmentGrid.png" VerticalAlignment="Top" Height="800" Width="480" Margin="0,-32,0,0" Grid.Row="0" Grid.RowSpan="2" IsHitTestVisible="False" />-->
     </Grid>
 
