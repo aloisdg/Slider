@@ -29,28 +29,20 @@
                     <TextBlock>1</TextBlock>
                     <StackPanel x:Name="ContainerSlider1">
                         <Grid HorizontalAlignment="Left" Background="Orange" Height="24" Width="{Binding ElementName=Slider1, Path=Value }" />
-                        <Grid HorizontalAlignment="Left" Background="BlueViolet" Height="24" Width="{Binding ElementName=Slider1, Path=Value }" />
-                        <Grid HorizontalAlignment="Left" Background="GreenYellow" Height="24" Width="{Binding ElementName=Slider1, Path=Value }" />
-                        <Grid Margin="-12,0">
-                            <Slider x:Name="Slider1" HorizontalAlignment="Stretch" 
-                                Minimum="0" Maximum="{Binding ActualWidth, ElementName=ContainerSlider1}" Value="0.5" />
-                        </Grid>
+                        <!--<Grid HorizontalAlignment="Left" Background="BlueViolet" Height="24" Width="{Binding ElementName=Slider1, Path=Value }" />-->
+                        <!--<Grid HorizontalAlignment="Left" Background="GreenYellow" Height="24" Width="{Binding ElementName=Slider1, Path=Value }" />-->
+                        <Slider x:Name="Slider1" Minimum="0" Maximum="{Binding ActualWidth, ElementName=ContainerSlider1}" Value="10" />
                     </StackPanel>
                     <TextBlock>2</TextBlock>
-                    <Grid x:Name="ContainerSlider2" Background="Green">
-                        <Grid Background="Blue" HorizontalAlignment="Left" Width="{Binding Value, ElementName=Slider2}"></Grid>
-                        <Grid Margin="-12,0">
-                            <Slider x:Name="Slider2" Height="100" HorizontalAlignment="Stretch" 
+                    <Grid x:Name="ContainerSlider2" Background="BlueViolet">
+                        <Grid Background="Orange" HorizontalAlignment="Left" Width="{Binding Value, ElementName=Slider2}"></Grid>
+                        <Slider x:Name="Slider2" Height="100" 
                                 Minimum="0" Maximum="{Binding ActualWidth, ElementName=ContainerSlider2}" Value="200" />
-                        </Grid>
                     </Grid>
                     <TextBlock>3</TextBlock>
                     <Grid x:Name="ContainerSlider3" Background="{StaticResource PhoneChromeBrush}">
                         <Grid Background="{StaticResource PhoneAccentBrush}" HorizontalAlignment="Left" Width="{Binding Value, ElementName=Slider3}"></Grid>
-                        <Grid Margin="0">
-                            <Slider x:Name="Slider3" Opacity="0" Height="100" HorizontalAlignment="Stretch" 
-                            Minimum="0" Maximum="{Binding ActualWidth, ElementName=ContainerSlider3}" Value="50" />
-                        </Grid>
+                        <Slider x:Name="Slider3" Opacity="0" Height="100" Minimum="0" Maximum="{Binding ActualWidth, ElementName=ContainerSlider3}" Value="50" />
                     </Grid>
                     <TextBlock>4</TextBlock>
                     <Grid x:Name="ContainerSlider4" Background="{StaticResource PhoneChromeBrush}">
@@ -58,8 +50,7 @@
                             <Grid Background="{StaticResource PhoneAccentBrush}" Width="{Binding Value, ElementName=Slider4}"></Grid>
                             <Grid x:Name="Cursor4" Width="20" Margin="-10,0,0,0" Background="{StaticResource PhoneForegroundBrush}"/>
                         </StackPanel>
-                        <Slider x:Name="Slider4" Opacity="0" Height="100" 
-                                Minimum="0" Maximum="{Binding ActualWidth, ElementName=ContainerSlider4}" Value="100" />
+                        <Slider x:Name="Slider4" Opacity="0" Height="100" Minimum="0" Maximum="{Binding ActualWidth, ElementName=ContainerSlider4}" Value="100" />
                     </Grid>
                     <TextBlock>5</TextBlock>
                     <Grid Height="{Binding Height, ElementName=Slider5}" x:Name="ContainerSlider5" Background="{StaticResource PhoneChromeBrush}">
